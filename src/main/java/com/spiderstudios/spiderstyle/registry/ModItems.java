@@ -15,12 +15,20 @@ public class ModItems {
             SpiderStyle.id("cotton_fiber"),
             new Item(new Item.Properties())
     );
+    public static final Item COTTON_SEEDS = Registry.register(
+            BuiltInRegistries.ITEM,
+            SpiderStyle.id("cotton_seeds"),
+            new Item(new Item.Properties())
+    );
 
     public static void register() {
 
         SpiderStyle.LOGGER.info("Registering SpiderStyle Items...");
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS)
-                .register(entries -> entries.accept(COTTON_FIBER));
+                .register(entries -> {
+                    entries.accept(COTTON_FIBER);
+                    entries.accept(COTTON_SEEDS);
+                });
     }
 }
