@@ -1,34 +1,28 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "spiderstyle",
 	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "SpiderStyle",
+	"description": "A Minecraft Fabric mod adding wardrobes, clothing, tailoring, furniture, and outfit customization.",
 	"authors": [
-		"Me!"
+		"SpiderStudios (MASKSPIDER)"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/mehul-bhargava/SpiderStyle",
+		"sources": "https://github.com/mehul-bhargava/SpiderStyle"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"license": "MIT",
+	"icon": "assets/spiderstyle/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.spiderstudios.spiderstyle.SpiderStyle"
 		],
 		"client": [
-			"com.example.client.ExampleModClient"
+			"com.spiderstudios.spiderstyle.client.SpiderStyleClient"
 		]
 	},
-	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
-	],
+	"mixins": [],
 	"depends": {
 		"fabricloader": ">=0.19.3",
 		"minecraft": "~26.1.2",
