@@ -1,5 +1,6 @@
 package com.spiderstudios.spiderstyle.registry;
-
+import com.spiderstudios.spiderstyle.block.ModBlocks;
+import net.minecraft.world.item.BlockItem;
 import com.spiderstudios.spiderstyle.SpiderStyle;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -20,6 +21,11 @@ public class ModItems {
             SpiderStyle.id("cotton_seeds"),
             new Item(new Item.Properties())
     );
+    public static final BlockItem TEST_BLOCK = Registry.register(
+            BuiltInRegistries.ITEM,
+            SpiderStyle.id("test_block"),
+            new BlockItem(ModBlocks.TEST_BLOCK, new Item.Properties())
+    );
 
     public static void register() {
 
@@ -29,6 +35,7 @@ public class ModItems {
                 .register(entries -> {
                     entries.accept(COTTON_FIBER);
                     entries.accept(COTTON_SEEDS);
+                    entries.accept(TEST_BLOCK);
                 });
     }
 }

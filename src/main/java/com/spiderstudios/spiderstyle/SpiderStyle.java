@@ -1,6 +1,6 @@
 package com.spiderstudios.spiderstyle;
 import net.fabricmc.api.ModInitializer;
-
+import com.spiderstudios.spiderstyle.block.ModBlocks;
 import net.minecraft.resources.ResourceLocation;
 import com.spiderstudios.spiderstyle.registry.ModItems;
 import org.slf4j.Logger;
@@ -18,6 +18,7 @@ public class SpiderStyle implements ModInitializer {
 	public void onInitialize() {
 
 		ModItems.register();
+		ModBlocks.register();
 
 		LOGGER.info("Hello Fabric world!");
 	}
